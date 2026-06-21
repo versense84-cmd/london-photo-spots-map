@@ -1,0 +1,157 @@
+[
+  {
+    "id": "bridge-arch-photo-spot",
+    "number": 1,
+    "name": "Bridge Arch Photo Spot",
+    "latitude": 51.5006156,
+    "longitude": -0.1199038,
+    "description": "桥下拱门机位，可以框住大本钟。",
+    "photos": [
+      "photos/01-bridge-arch-photo-spot-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "westminster-bridge-london-eye",
+    "number": 2,
+    "name": "Westminster Bridge / London Eye",
+    "latitude": 51.5017547,
+    "longitude": -0.1238601,
+    "description": "桥头位置，可以拍完整伦敦眼。",
+    "photos": [
+      "photos/02-westminster-bridge-london-eye-1.jpg",
+      "photos/02-westminster-bridge-london-eye-2.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "medium",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "k2-telephone-box",
+    "number": 3,
+    "name": "K2 Telephone Box Parliament Square",
+    "latitude": 51.5012133,
+    "longitude": -0.1272963,
+    "description": "红色电话亭和 Big Ben 同框机位。",
+    "photos": [
+      "photos/03-k2-telephone-box-parliament-square-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "low",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "westminster-bridge-big-ben",
+    "number": 4,
+    "name": "Westminster Bridge Big Ben",
+    "latitude": 51.50075,
+    "longitude": -0.1218333,
+    "description": "桥面栏杆做前景，适合拍大本钟。",
+    "photos": [
+      "photos/04-westminster-bridge-big-ben-1.jpg",
+      "photos/04-westminster-bridge-big-ben-2.jpg",
+      "photos/04-westminster-bridge-big-ben-3.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "queens-walk",
+    "number": 5,
+    "name": "Victoria Embankment",
+    "latitude": 51.502644,
+    "longitude": -0.123512,
+    "description": "伦敦眼东侧河边步道，适合拍长椅前景。",
+    "photos": [
+      "photos/05-victoria-embankment-1.jpg"
+    ],
+    "source": "manual",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "london-bridge-the-shard",
+    "number": 6,
+    "name": "London Bridge / The Shard",
+    "latitude": 51.50733,
+    "longitude": -0.08747,
+    "description": "桥面上拍 The Shard 和蓝调人像。",
+    "photos": [
+      "photos/06-london-bridge-the-shard-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "medium",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "westminster-station",
+    "number": 7,
+    "name": "Potters Fields Park",
+    "latitude": 51.50458,
+    "longitude": -0.07862,
+    "description": "塔桥南岸草坪，适合拍完整 Tower Bridge。",
+    "photos": [
+      "photos/07-westminster-station-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "victoria-tower-gardens",
+    "number": 8,
+    "name": "Victoria Tower Gardens",
+    "latitude": 51.49695,
+    "longitude": -0.12542,
+    "description": "议会大厦旁的公园草坪机位。",
+    "photos": [
+      "photos/08-victoria-tower-gardens-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "medium",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "one-new-change",
+    "number": 9,
+    "name": "One New Change",
+    "latitude": 51.51358,
+    "longitude": -0.09527,
+    "description": "玻璃通道正对圣保罗大教堂。",
+    "photos": [
+      "photos/09-one-new-change-1.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  },
+  {
+    "id": "natural-history-museum",
+    "number": 10,
+    "name": "Natural History Museum",
+    "latitude": 51.496715,
+    "longitude": -0.176367,
+    "description": "中央大厅二层，可以拍蓝鲸骨架。",
+    "photos": [
+      "photos/10-natural-history-museum-1.jpg",
+      "photos/10-natural-history-museum-2.jpg",
+      "photos/10-natural-history-museum-3.jpg"
+    ],
+    "source": "manual_coordinates",
+    "confidence": "high",
+    "candidates": [],
+    "confirmed": true
+  }
+]
