@@ -434,12 +434,22 @@ button { cursor: pointer; }
   box-shadow: 0 8px 24px rgba(36, 49, 44, .12);
 }
 
-.map-status > div:first-child { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.map-status-place { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .map-status strong, .map-status span { display: block; }
 .map-status strong { overflow: hidden; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .map-status span { margin-top: 2px; color: var(--muted); font-size: 10px; }
 .status-dot { width: 10px; height: 10px; flex: 0 0 auto; background: #e8a23d; border-radius: 50%; }
 .status-dot.located { background: #1d9b61; }
+
+.map-status-photo {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(20, 24, 21, .18);
+}
 
 .map-actions { display: flex; gap: 6px; flex-shrink: 0; }
 .map-actions button, .map-actions a {
@@ -473,6 +483,14 @@ button { cursor: pointer; }
 .custom-marker.low:not(.active) { background: #d65d56; }
 .custom-marker.medium:not(.active) { background: #d8922f; }
 .marker-popup { min-width: 180px; }
+.marker-popup-photo {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 8px;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
 .marker-popup strong, .marker-popup span, .marker-popup em { display: block; }
 .marker-popup span { margin-top: 4px; color: #66706a; font-size: 11px; }
 .marker-popup em { margin: 5px 0; color: #8b928e; font-size: 10px; font-style: normal; }
@@ -673,7 +691,20 @@ button { cursor: pointer; }
   .drop-zone { margin-left: 18px; margin-right: 18px; }
   .drop-zone > div:first-child { min-width: 0; }
   .drop-actions button { width: 34px; padding: 0; font-size: 0; justify-content: center; }
-  .map-status { align-items: flex-start; flex-direction: column; }
+  .map-status {
+    min-height: 132px;
+    padding-top: 14px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .map-status-place { max-width: calc(100% - 72px); }
+  .map-status-photo {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 58px;
+    height: 58px;
+  }
   .map-actions { width: 100%; }
   .map-actions button, .map-actions a { flex: 1; justify-content: center; }
 }

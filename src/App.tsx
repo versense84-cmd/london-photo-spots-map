@@ -305,6 +305,11 @@ function isLocated(spot: Spot) {
   return spot.latitude !== null && spot.longitude !== null;
 }
 
+function photoUrl(photo: string) {
+  if (/^(?:data:|https?:|blob:)/i.test(photo)) return photo;
+  return `${import.meta.env.BASE_URL}${photo.replace(/^\/+/, "")}`;
+}
+
 function parseNote(text: string): Spot[] {
   const lines = text.replace(/\r\n/g, "\n").split("\n");
   const titleIndexes: number[] = [];
@@ -868,7 +873,7 @@ export function App() {
               <div className="photo-stack">
                 {spot.photos.length ? (
                   spot.photos.slice(0, 3).map((photo, index) => (
-                    <img key={`${photo.slice(0, 30)}-${index}`} src={photo} alt="" style={{ "--photo-index": index } as CSSProperties} />
+                    <img key={`${photo.slice(0, 30)}-${index}`} src={photoUrl(photo)} alt="" style={{ "--photo-index": index } as CSSProperties} />
                   ))
                 ) : (
                   <span className="empty-photo"><ImageSquare size={23} /></span>
@@ -999,6 +1004,9 @@ export function App() {
             >
               <Popup>
                 <div className="marker-popup">
+                  {spot.photos[0] && (
+                    <img className="marker-popup-photo" src={photoUrl(spot.photos[0])} alt={`${spot.name} 拍摄参考`} />
+                  )}
                   <strong>{spot.name}</strong>
                   <span>{spot.description}</span>
                   <em>{spot.confidence} · {spot.confirmed ? "已确认" : "待确认"}</em>
@@ -1039,7 +1047,7 @@ export function App() {
         )}
 
         <div className="map-status">
-          <div>
+          <div className="map-status-place">
             <span className={`status-dot ${selected && isLocated(selected) ? "located" : ""}`} />
             <div>
               <strong>{selected?.name || "选择地点"}</strong>
@@ -1048,6 +1056,9 @@ export function App() {
                 : "搜索地点或点击地图设置准确坐标"}</span>
             </div>
           </div>
+          {selected?.photos[0] && (
+            <img className="map-status-photo" src={photoUrl(selected.photos[0])} alt={`${selected.name} 拍摄参考`} />
+          )}
           <div className="map-actions">
             {selected && isLocated(selected) && (
               <a href={mapLink(selected)} target="_blank" rel="noreferrer"><ArrowSquareOut size={17} /> Google Maps</a>
