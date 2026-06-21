@@ -58,7 +58,7 @@ type Spot = {
   confirmed: boolean;
 };
 
-const STORAGE_KEY = "photo-place-collection-v5";
+const STORAGE_KEY = "photo-place-collection-v6";
 const NOTE_KEY = "photo-place-note-v3";
 const CITY_KEY = "photo-place-city-v1";
 const GEOCODE_CACHE_KEY = "photo-place-geocode-cache-v1";

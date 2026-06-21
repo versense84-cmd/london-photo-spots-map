@@ -95,10 +95,10 @@
   {
     "id": "westminster-station",
     "number": 7,
-    "name": "Westminster Station",
-    "latitude": 51.501236,
-    "longitude": -0.12484,
-    "description": "地铁站牌和 London Eye 可以同框。",
+    "name": "Potters Fields Park",
+    "latitude": 51.50458,
+    "longitude": -0.07862,
+    "description": "塔桥南岸草坪，适合拍完整 Tower Bridge。",
     "photos": [
       "photos/07-westminster-station-1.jpg"
     ],
