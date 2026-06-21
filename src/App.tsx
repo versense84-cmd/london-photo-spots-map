@@ -58,7 +58,7 @@ type Spot = {
   confirmed: boolean;
 };
 
-const STORAGE_KEY = "photo-place-collection-v4";
+const STORAGE_KEY = "photo-place-collection-v5";
 const NOTE_KEY = "photo-place-note-v3";
 const CITY_KEY = "photo-place-city-v1";
 const GEOCODE_CACHE_KEY = "photo-place-geocode-cache-v1";
@@ -597,7 +597,12 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    if (initialDataReady) localStorage.setItem(STORAGE_KEY, JSON.stringify(spots));
+    if (!initialDataReady) return;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(spots));
+    } catch {
+      notify("浏览器存储空间不足，图片仍可浏览，但新修改可能无法保存");
+    }
   }, [initialDataReady, spots]);
   useEffect(() => localStorage.setItem(NOTE_KEY, noteText), [noteText]);
   useEffect(() => localStorage.setItem(CITY_KEY, city), [city]);
