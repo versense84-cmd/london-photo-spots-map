@@ -1,0 +1,21 @@
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+
+export default defineConfig({
+  base: process.env.GITHUB_ACTIONS
+    ? `/${process.env.GITHUB_REPOSITORY?.split("/")[1] || ""}/`
+    : "/",
+  optimizeDeps: {
+    include: ["react", "react-dom/client"],
+  },
+  server: {
+    proxy: {
+      "/api": "http://127.0.0.1:8787",
+    },
+    warmup: {
+      clientFiles: ["./src/main.tsx"],
+    },
+  },
+  plugins: [react(), tailwindcss()],
+});
